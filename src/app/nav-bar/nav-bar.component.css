@@ -2,38 +2,12 @@
   background-color: #240e34;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  padding: 1.5rem 2rem; /* Reduced padding for better mobile display */
+  padding: 1.5rem 20rem; /* centering*/
 }
 
 .navbar-custom.scrolled {
-  padding: 0.7rem 2rem; /* Adjusted for consistency */
+  padding: 0.7rem 8rem; /* Adjusted to match proportionally */
   background-color: #1d1127;
-}
-
-/* Media query for larger screens */
-@media (min-width: 992px) {
-  .navbar-custom {
-    padding: 1.5rem 20rem;
-  }
-  .navbar-custom.scrolled {
-    padding: 0.7rem 8rem;
-  }
-}
-
-/* Offcanvas styles */
-.offcanvas {
-  background-color: #240e34;
-  color: white;
-  max-width: 80vw; /* Prevent offcanvas from being too wide */
-}
-
-.offcanvas .btn-close {
-  filter: invert(1); /* Make close button white */
-}
-
-.offcanvas .nav-link {
-  padding: 1rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .navbar-custom .nav-link {
