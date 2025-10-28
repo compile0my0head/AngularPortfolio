@@ -82,3 +82,15 @@
 .navbar-custom.fixed-top {
   z-index: 1030;
 }
+
+/* --- Responsive Fix for Small Screens --- */
+@media (max-width: 992px) {
+  .navbar-custom {
+    padding: 1rem 2rem; /* much smaller padding */
+  }
+
+  .navbar-custom.scrolled {
+    padding: 0.7rem 2rem; /* consistent when scrolled */
+  }
+}
+
