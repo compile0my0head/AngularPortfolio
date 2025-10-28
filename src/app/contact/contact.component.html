@@ -1,0 +1,44 @@
+<div class="contact-section text-center py-5">
+  <h2 class="section-title mb-4">Contact Me</h2>
+  <p class="intro-text mb-5">
+    Let’s connect! Whether you’re interested in collaboration, have a project in mind,
+    or just want to say hello, feel free to reach out.
+  </p>
+
+  <div class="contact-wrapper" data-aos="fade-up">
+    <!-- Contact Form -->
+    <div class="contact-form mx-auto">
+      <form (submit)="onSubmit()">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control animated-input" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control animated-input" placeholder="Your Email" required>
+          </div>
+          <div class="col-12">
+            <input type="text" class="form-control animated-input" placeholder="Message Title" required>
+          </div>
+          <div class="col-12">
+            <textarea class="form-control animated-input" rows="5" placeholder="Message Description" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-contact mt-4">Send Message</button>
+      </form>
+    </div>
+    <!-- Contact Info -->
+    <div class="row justify-content-center mb-5 mt-5">
+      @for (method of contactMethods; track $index) {
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="contact-card text-center p-4 shadow-sm">
+            <a [href]="method.link" target="_blank" class="contact-link">
+              <i [class]="method.icon"></i>
+              <h5 class="mt-3">{{ method.title }}</h5>
+              <p>{{ method.value }}</p>
+            </a>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

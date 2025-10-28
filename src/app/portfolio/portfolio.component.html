@@ -1,0 +1,50 @@
+<section class="portfolio-section">
+  <!-- Angular Projects -->
+  <h2 class="section-title" data-aos="fade-up">Angular Projects</h2>
+
+  <div class="projects-grid" data-aos="fade-up">
+    @for (project of angularProjects; track $index) {
+      <div class="project-card" (click)="openPopup(project)">
+        <div class="image-container">
+          <img [src]="project.image" [alt]="project.title" />
+          <div class="overlay">
+            <span class="plus">+</span>
+          </div>
+        </div>
+        <h3>{{ project.title }}</h3>
+      </div>
+    }
+  </div>
+
+  <!-- Animated divider -->
+  <div class="section-divider" data-aos="zoom-in"></div>
+
+  <!-- MVC Projects -->
+  <h2 class="section-title" data-aos="fade-up">MVC Projects</h2>
+
+  <div class="projects-grid" data-aos="fade-up">
+    @for (project of mvcProjects; track $index) {
+      <div class="project-card" (click)="openPopup(project)">
+        <div class="image-container">
+          <img [src]="project.image" [alt]="project.title" />
+          <div class="overlay">
+            <span class="plus">+</span>
+          </div>
+        </div>
+        <h3>{{ project.title }}</h3>
+      </div>
+    }
+  </div>
+
+  <!-- Popup -->
+  @if (selectedProject) {
+    <div class="popup" (click)="closePopup()">
+      <div class="popup-content" (click)="$event.stopPropagation()">
+        <img [src]="selectedProject.image" [alt]="selectedProject.title" class="popup-img" />
+        <h2>{{ selectedProject.title }}</h2>
+        <p>{{ selectedProject.description }}</p>
+        <button (click)="closePopup()">Close</button>
+      </div>
+    </div>
+  }
+</section>

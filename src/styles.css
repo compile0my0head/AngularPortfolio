@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  padding-top: 70px; /* Prevent navbar overlap globally */
+    background: linear-gradient(145deg, #1a1325, #241934);
+
+} 

@@ -1,0 +1,84 @@
+.navbar-custom {
+  background-color: #240e34;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem 20rem; /* centering*/
+}
+
+.navbar-custom.scrolled {
+  padding: 0.7rem 8rem; /* Adjusted to match proportionally */
+  background-color: #1d1127;
+}
+
+.navbar-custom .nav-link {
+  position: relative;
+  color: #fff !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, margin-top 0.3s ease;
+  padding-bottom: 6px;
+}
+
+/* Hover effect */
+.navbar-custom .nav-link:hover {
+  color: #d1b3ff !important;
+}
+
+/* Active link */
+.navbar-custom .nav-link.active {
+  color: #c8a6ff !important;
+  font-weight: 600;
+}
+
+/* Elegant glowing underline animation for active/hovered links */
+.navbar-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #d1b3ff, #9b59b6);
+  transition: width 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+/* Show underline for active or hovered */
+.navbar-custom .nav-link:hover::after,
+.navbar-custom .nav-link.active::after {
+  width: 100%;
+}
+
+/* Add space between the nav items */
+.navbar-custom .navbar-nav {
+  display: flex;
+  gap: 1.5rem; /*  controls spacing between tabs */
+}
+
+/* Brand (logo) styling */
+.navbar-brand {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #d1b3ff !important;
+  transform: scale(1.05);
+}
+
+/* Optional: smooth navbar resizing on scroll */
+.navbar-custom.scrolled .nav-link {
+  padding-bottom: 4px;
+}
+
+.navbar-custom.scrolled .navbar-brand {
+  font-size: 1.3rem;
+}
+
+/* Ensure navbar stays fixed nicely */
+.navbar-custom.fixed-top {
+  z-index: 1030;
+}
